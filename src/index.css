@@ -1,3 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap');
 
 @import "tailwindcss";
+
+@theme {
+  --color-lego-red:    #E3000B;
+  --color-lego-yellow: #F5C400;
+  --color-lego-blue:   #006CB7;
+  --color-lego-green:  #4CAF50;
+  --color-lego-dark:   #1A1A2E;
+  --color-baseplate:   #C7C7B8;
+  --color-baseplate-dark: #B0B0A0;
+
+  --font-fredoka: "Fredoka One", cursive;
+  --font-nunito:  "Nunito", sans-serif;
+}
