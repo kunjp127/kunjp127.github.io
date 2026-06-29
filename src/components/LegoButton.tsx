@@ -46,16 +46,15 @@ export default function LegoButton({
             className={[
               "h-4 w-8 rounded-t-sm",
               baseColor,
-              "relative overflow-hidden",
             ].join(" ")}
-          >
-            <div className="mx-auto mt-0,5 h-0.75 w-[80%] rounded-full" />
-          </div>
+          />
         ))}
       </div>
 
-      <div className="flex h-full items-center justify-center px-4 pb-2 font-bold text-white">
-        {children}
+      <div className="flex h-full items-center justify-center px-6 pb-2">
+        <span className="text-lg sm:text-xl leading-tight text-white text-center">
+          {children}
+        </span>
       </div>
     </button>
   );
