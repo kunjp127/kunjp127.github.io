@@ -30,7 +30,7 @@ export default function Hero() {
               Full-Stack Engineer
             </p>
             <p className="font-nunito font-bold text-base text-[#5a4500] mt-1">
-              Build. Ship Repeat.
+              Build. Ship. Repeat.
             </p>
           </div>
 
