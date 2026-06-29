@@ -35,6 +35,7 @@ export default function LegoButton({
         "active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.25)]",
         "hover:-translate-y-1 hover:rotate-[0.3deg] hover:brightness-110",
         "cursor-pointer",
+        "border-[2.5px] border-black",
         baseColor,
         className,
       ].join(" ")}
@@ -44,7 +45,7 @@ export default function LegoButton({
           <div
             key={i}
             className={[
-              "h-4 w-8 rounded-t-sm",
+              "h-4 w-8 rounded-t-sm border-[2.5px] border-black border-b-0",
               baseColor,
             ].join(" ")}
           />
