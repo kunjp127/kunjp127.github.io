@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const links = ["Skills", "Projects", "Experience", "Contact"];
+  const links = ["Experience", "Education"];
 
   return (
     <nav className="bg-lego-dark border-b-4 border-black sticky top-0 z-50">

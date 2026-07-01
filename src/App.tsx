@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
+import Credentials from "./components/Education";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Nav />
       <Hero />
       <Experience />
+      <Credentials />
       <Contact />
     </div>
   );
