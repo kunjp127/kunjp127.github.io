@@ -1,6 +1,6 @@
 import React from "react";
 
-type LegoColor = "red" | "yellow" | "blue" | "green";
+type LegoColor = "red" | "yellow" | "blue" | "green" | "purple";
 
 interface LegoButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -13,6 +13,7 @@ const colorMap: Record<LegoColor, string> = {
   yellow: "bg-lego-yellow text-black",
   blue: "bg-lego-blue",
   green: "bg-lego-green",
+  purple: "bg-lego-purple",
 };
 
 export default function LegoButton({

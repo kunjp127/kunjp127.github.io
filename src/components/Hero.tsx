@@ -1,4 +1,4 @@
-import { FaDownload } from "react-icons/fa6";
+import { FaDownload, FaGithub } from "react-icons/fa6";
 
 import LegoButton from "./LegoButton";
 
@@ -38,7 +38,7 @@ export default function Hero() {
             I build Legos for fun. I build software to afford more Legos.
           </p>
 
-          <div className="flex flex-wrap gap-x-5 gap-y-8 pt-3">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-6 pt-3 sm:flex sm:flex-wrap sm:gap-x-5 sm:gap-y-8">
             <LegoButton onClick={() => window.location.href = "#projects"} color="blue" studs={3}>
               View Projects
             </LegoButton>
@@ -51,6 +51,17 @@ export default function Hero() {
               <div className="flex items-center justify-center gap-2 text-lg sm:text-xl">
                 <FaDownload />
                 <span>Resume</span>
+              </div>
+            </LegoButton>
+
+            <LegoButton
+              color="purple"
+              studs={3}
+              onClick={() => window.open("https://github.com/kunjp127", "_blank", "noopener,noreferrer")}
+            >
+              <div className="flex items-center justify-center gap-2 text-lg sm:text-xl">
+                <FaGithub />
+                <span>Github</span>
               </div>
             </LegoButton>
 
