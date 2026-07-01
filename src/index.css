@@ -3,12 +3,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lego-red:    #E3000B;
-  --color-lego-yellow: #F5C400;
-  --color-lego-blue:   #006CB7;
-  --color-lego-green:  #4CAF50;
-  --color-lego-dark:   #1A1A2E;
-  --color-baseplate:   #C7C7B8;
+  --color-lego-red:     #E3000B;
+  --color-lego-yellow:  #F5C400;
+  --color-lego-blue:    #006CB7;
+  --color-lego-green:   #4CAF50;
+  --color-lego-orange:  #FF8C1A;
+  --color-lego-purple:  #7B2FBE;
+  --color-lego-teal:    #00A79D;
+  --color-lego-pink:    #FF4FA3;
+  --color-lego-white:   #F4F4F0;
+  --color-lego-dark:    #1A1A2E;
+  --color-baseplate:    #C7C7B8;
   --color-baseplate-dark: #B0B0A0;
 
   --font-fredoka: "Fredoka One", cursive;

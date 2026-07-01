@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="px-10 lg:px-16 py-16 min-h-screen flex items-start"
+      className="px-10 lg:px-16 pt-16 pb-4 min-h-[85vh] flex items-start"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-24 items-center">
         <div className="space-y-6">
@@ -17,10 +17,10 @@ export default function Hero() {
           </div>
 
           <div className="leading-[0.9] space-y-2">
-            <p className="font-fredoka text-8xl text-lego-dark [text-shadow:4px_4px_0_#000] m-0">
+            <p className="font-fredoka text-8xl text-lego-blue [text-shadow:4px_4px_0_#000] m-0">
               Kunj
             </p>
-            <p className="font-fredoka text-8xl text-lego-blue [text-shadow:4px_4px_0_#000] m-0">
+            <p className="font-fredoka text-8xl text-lego-orange [text-shadow:4px_4px_0_#000] m-0">
               Patel
             </p>
           </div>
