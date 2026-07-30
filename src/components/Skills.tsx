@@ -1,31 +1,51 @@
 import { motion } from "framer-motion";
 import {
-  FaReact, FaNodeJs, FaAws, FaDocker, FaPython, FaVuejs, FaGitAlt,
+  FaReact, FaNodeJs, FaAws, FaDocker, FaPython, FaVuejs, FaGitAlt, FaJava, FaLinux,
 } from "react-icons/fa6";
 import {
-  SiTypescript, SiDjango, SiMongodb, SiPostgresql, SiTailwindcss, SiGraphql,
+  SiTypescript, SiDjango, SiMongodb, SiFlutter, SiCplusplus, SiNextdotjs,
+  SiTailwindcss, SiJavascript,
 } from "react-icons/si";
 
-interface Skill {
-  name: string;
-  icon: React.ReactNode;
-  color: string;
+interface SkillCategory {
+  title: string;
+  skills: { name: string; icon: React.ReactNode; color: string }[];
 }
 
-const skills: Skill[] = [
-  { name: "React", icon: <FaReact />, color: "bg-lego-blue" },
-  { name: "TypeScript", icon: <SiTypescript />, color: "bg-lego-blue" },
-  { name: "Node.js", icon: <FaNodeJs />, color: "bg-lego-green" },
-  { name: "Python", icon: <FaPython />, color: "bg-lego-yellow" },
-  { name: "AWS", icon: <FaAws />, color: "bg-lego-orange" },
-  { name: "Docker", icon: <FaDocker />, color: "bg-lego-blue" },
-  { name: "Vue.js", icon: <FaVuejs />, color: "bg-lego-green" },
-  { name: "Django", icon: <SiDjango />, color: "bg-lego-green" },
-  { name: "MongoDB", icon: <SiMongodb />, color: "bg-lego-green" },
-  { name: "PostgreSQL", icon: <SiPostgresql />, color: "bg-lego-blue" },
-  { name: "Tailwind", icon: <SiTailwindcss />, color: "bg-lego-teal" },
-  { name: "GraphQL", icon: <SiGraphql />, color: "bg-lego-pink" },
-  { name: "Git", icon: <FaGitAlt />, color: "bg-lego-red" },
+const categories: SkillCategory[] = [
+  {
+    title: "Languages",
+    skills: [
+      { name: "Java", icon: <FaJava />, color: "bg-lego-red" },
+      { name: "JavaScript", icon: <SiJavascript />, color: "bg-lego-yellow" },
+      { name: "TypeScript", icon: <SiTypescript />, color: "bg-lego-blue" },
+      { name: "Python", icon: <FaPython />, color: "bg-lego-green" },
+      { name: "C/C++", icon: <SiCplusplus />, color: "bg-lego-purple" },
+    ],
+  },
+  {
+    title: "Frameworks",
+    skills: [
+      { name: "React", icon: <FaReact />, color: "bg-lego-blue" },
+      { name: "React Native", icon: <FaReact />, color: "bg-lego-teal" },
+      { name: "Vue.js", icon: <FaVuejs />, color: "bg-lego-green" },
+      { name: "Next.js", icon: <SiNextdotjs />, color: "bg-lego-dark" },
+      { name: "Flutter", icon: <SiFlutter />, color: "bg-lego-blue" },
+      { name: "Django", icon: <SiDjango />, color: "bg-lego-green" },
+      { name: "Node.js", icon: <FaNodeJs />, color: "bg-lego-green" },
+      { name: "Tailwind", icon: <SiTailwindcss />, color: "bg-lego-teal" },
+    ],
+  },
+  {
+    title: "Tools & Cloud",
+    skills: [
+      { name: "AWS", icon: <FaAws />, color: "bg-lego-orange" },
+      { name: "Docker", icon: <FaDocker />, color: "bg-lego-blue" },
+      { name: "Git", icon: <FaGitAlt />, color: "bg-lego-red" },
+      { name: "Linux", icon: <FaLinux />, color: "bg-lego-dark" },
+      { name: "MongoDB", icon: <SiMongodb />, color: "bg-lego-green" },
+    ],
+  },
 ];
 
 export default function Skills() {
@@ -48,34 +68,49 @@ export default function Skills() {
         </h2>
       </motion.div>
 
-      <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.06 } } }}
-      >
-        {skills.map((skill) => (
-          <motion.div
-            key={skill.name}
-            variants={{
-              hidden: { opacity: 0, scale: 0.8, y: 20 },
-              show: { opacity: 1, scale: 1, y: 0 },
-            }}
-            whileHover={{ scale: 1.1, rotate: 2, y: -5 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className={`${skill.color} border-[3px] border-black border-b-[6px] rounded-lg p-5 flex flex-col items-center gap-3 cursor-default`}
-          >
-            <span className="text-3xl text-white drop-shadow-[1px_1px_0_rgba(0,0,0,0.3)]">
-              {skill.icon}
-            </span>
-            <span className="font-nunito font-black text-xs uppercase tracking-wider text-white">
-              {skill.name}
-            </span>
-          </motion.div>
+      <div className="space-y-12">
+        {categories.map((category) => (
+          <div key={category.title}>
+            <motion.h3
+              className="font-fredoka text-2xl text-lego-dark mb-5 [text-shadow:1px_1px_0_rgba(0,0,0,0.1)]"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+            >
+              {category.title}
+            </motion.h3>
+            <motion.div
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
+            >
+              {category.skills.map((skill) => (
+                <motion.div
+                  key={skill.name}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.8, y: 20 },
+                    show: { opacity: 1, scale: 1, y: 0 },
+                  }}
+                  whileHover={{ scale: 1.1, rotate: 2, y: -5 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className={`${skill.color} border-[3px] border-black border-b-[6px] rounded-lg p-4 flex flex-col items-center gap-2 cursor-default`}
+                >
+                  <span className="text-2xl text-white drop-shadow-[1px_1px_0_rgba(0,0,0,0.3)]">
+                    {skill.icon}
+                  </span>
+                  <span className="font-nunito font-black text-[10px] uppercase tracking-wider text-white text-center">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

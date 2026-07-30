@@ -4,6 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 interface Project {
   title: string;
   description: string;
+  highlights: string[];
   stack: string[];
   color: string;
   github?: string;
@@ -14,38 +15,75 @@ const projects: Project[] = [
   {
     title: "THON E-Commerce Store",
     description:
-      "Full-stack e-commerce platform generating ~$30K/month in revenue. Built with Vue.js frontend, Django REST backend, and deployed on AWS ECS with Docker.",
-    stack: ["Vue.js", "Django", "AWS ECS", "Docker", "S3", "CloudFront"],
+      "Production full-stack e-commerce platform for the world's largest student-run philanthropy ($254M+ raised).",
+    highlights: [
+      "Generates $30K/month in revenue serving thousands of users",
+      "PCI DSS compliant payment processing with Evalon integration",
+      "Production-grade AWS ECS architecture with Docker, CloudFormation, S3, and CloudFront",
+    ],
+    stack: ["Vue.js", "Django", "AWS ECS", "Docker", "CloudFormation", "PCI DSS"],
     color: "bg-lego-blue",
     live: "https://store.thon.org",
   },
   {
-    title: "Impact Incubator App",
+    title: "Impact Incubator Mobile App",
     description:
-      "React Native mobile app serving 1,000+ students with a Node.js backend on AWS. Features authentication, real-time data, and Generative AI integrations.",
-    stack: ["React Native", "Node.js", "MongoDB", "AWS EC2", "GenAI"],
+      "Cross-platform mobile application (iOS/Android) serving 1,000 students and designed to scale to 18,000+ users.",
+    highlights: [
+      "Led team of 3 developers with CI/CD via App Store Connect & Google Play",
+      "Node.js backend on AWS EC2 with MongoDB and RESTful APIs",
+      "AI-driven features in collaboration with a funded AI startup",
+    ],
+    stack: ["React Native", "Node.js", "MongoDB", "AWS EC2", "GenAI", "CI/CD"],
     color: "bg-lego-green",
+  },
+  {
+    title: "Karya",
+    description:
+      "Cross-platform mobile application for note-taking and task management with cloud synchronization.",
+    highlights: [
+      "Built with Flutter for seamless iOS/Android experience",
+      "Serverless backend with AWS Lambda and DynamoDB for low-latency data storage",
+      "Features task creation, categorization, and real-time cloud sync",
+    ],
+    stack: ["Flutter", "AWS Lambda", "DynamoDB", "Dart"],
+    color: "bg-lego-orange",
   },
   {
     title: "Inventory Management System",
     description:
-      "Internal tool built from scratch for Penn State Homecoming. Streamlines inventory tracking with a containerized Django + Vue.js stack on Linux.",
+      "Internal tool built from scratch as the sole developer for Penn State Homecoming operations.",
+    highlights: [
+      "Full-stack Django + Vue.js application for inventory tracking",
+      "Containerized with Docker and deployed to Linux VM",
+      "Streamlined management workflows across the organization",
+    ],
     stack: ["Django", "Vue.js", "Docker", "Docker Compose", "Linux"],
-    color: "bg-lego-orange",
+    color: "bg-lego-red",
   },
   {
     title: "Cloud Cost Analyzer",
     description:
-      "Serverless pipeline for cloud cost analysis and reporting at Samtek Inc. Leverages AWS Lambda, Glue, and Athena for optimized data queries.",
-    stack: ["AWS Lambda", "Python", "Glue", "Athena", "QuickSight"],
-    color: "bg-lego-red",
+      "Serverless data pipeline for cloud usage cost analysis and executive reporting at Samtek Inc.",
+    highlights: [
+      "AWS Lambda functions for automated cost analysis",
+      "Data pipeline with S3, Glue, Athena, and QuickSight",
+      "Optimized queries improving reporting accuracy and performance",
+    ],
+    stack: ["AWS Lambda", "Python", "S3", "Glue", "Athena", "QuickSight"],
+    color: "bg-lego-purple",
   },
   {
     title: "Portfolio Site",
     description:
-      "This very site! A LEGO-themed portfolio built with React, Tailwind CSS, and Framer Motion. Designed to impress both humans and AI reviewers.",
+      "LEGO-themed portfolio with Framer Motion animations, structured data for AI parsing, and responsive design.",
+    highlights: [
+      "React + TypeScript with Tailwind CSS and Framer Motion",
+      "JSON-LD structured data for ATS and AI hiring tool compatibility",
+      "3D tilt effects, scroll-reveal animations, and spring physics",
+    ],
     stack: ["React", "TypeScript", "Tailwind", "Framer Motion", "Vite"],
-    color: "bg-lego-purple",
+    color: "bg-lego-teal",
     github: "https://github.com/kunjp127/portfolio",
   },
 ];
@@ -116,9 +154,18 @@ export default function Projects() {
               </div>
             </div>
 
-            <p className="font-nunito text-sm leading-relaxed text-white/90 font-semibold">
+            <p className="font-nunito text-sm leading-relaxed text-white/90 font-bold">
               {project.description}
             </p>
+
+            <ul className="space-y-1.5">
+              {project.highlights.map((h, i) => (
+                <li key={i} className="font-nunito text-xs leading-relaxed text-white/85 flex gap-2">
+                  <span className="shrink-0">▪</span>
+                  <span className="font-semibold">{h}</span>
+                </li>
+              ))}
+            </ul>
 
             <div className="flex flex-wrap gap-2 mt-auto pt-2">
               {project.stack.map((tech) => (
