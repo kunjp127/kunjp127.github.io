@@ -1,5 +1,6 @@
 import { FaGraduationCap } from "react-icons/fa6";
 import { GrCertificate } from "react-icons/gr";
+import { motion } from "framer-motion";
 
 type LegoColor = "blue" | "yellow" | "red" | "green" | "orange" | "purple" | "teal" | "pink";
 
@@ -9,7 +10,7 @@ interface CredentialItem {
   institution: string;
   period: string;
   color: LegoColor;
-  detail?: string;
+  details?: string[];
 }
 
 const credentials: CredentialItem[] = [
@@ -17,16 +18,16 @@ const credentials: CredentialItem[] = [
     type: "degree",
     title: "Master of Business Administration",
     institution: "The Pennsylvania State University",
-    period: "2025 — 2026",
+    period: "Aug 2025 - May 2026",
     color: "blue",
   },
   {
     type: "degree",
     title: "Bachelor of Science, Computer Science",
     institution: "The Pennsylvania State University",
-    period: "2021 — 2025",
+    period: "Aug 2021 - May 2025",
     color: "green",
-    detail: "GPA 3.59",
+    details: ["GPA: 3.59/4.00", "Minor: Cybersecurity", "Minor: Mathematics"],
   },
   {
     type: "cert",
@@ -52,36 +53,50 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="px-10 lg:px-16 max-w-7xl mx-auto pb-15"
+      className="px-5 sm:px-10 lg:px-16 max-w-7xl mx-auto pb-15"
     >
-      <div className="text-center mb-16 space-y-3">
+      <motion.div
+        className="text-center mb-16 space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="inline-block bg-lego-dark border-[2.5px] border-black border-b-[5px] rounded px-4 py-2">
           <span className="font-nunito font-black text-sm uppercase tracking-widest text-white">
             Building Blocks of Knowledge
           </span>
         </div>
-        <h2 className="font-fredoka text-6xl text-lego-teal [text-shadow:3px_3px_0_#000]">
+        <h2 className="font-fredoka text-4xl sm:text-6xl text-lego-teal [text-shadow:3px_3px_0_#000]">
           Education &amp; Certs
         </h2>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
         {credentials.map((item, i) => {
           const c = colorMap[item.color];
           const Icon = item.type === "degree" ? FaGraduationCap : GrCertificate;
 
           return (
-            <div key={i} className="flex flex-col">
-              {/* brick body */}
-              <div
+            <motion.div
+              key={i}
+              className="flex flex-col"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
+            >
+              <motion.div
                 className={`${c.bg} border-[3px] border-black border-b-[6px] rounded-lg px-6 py-7 space-y-4 flex-1 flex flex-col`}
+                whileHover={{ scale: 1.03, rotate: -0.5 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="flex items-center justify-between">
                   <div className="w-11 h-11 flex items-center justify-center bg-white/90 border-2 border-black rounded-full">
                     <Icon className="text-lego-dark text-lg" />
                   </div>
                   <span
-                    className={`font-nunito font-black text-sm uppercase tracking-widest ${c.text} opacity-90`}
+                    className={`font-nunito font-black text-xs uppercase tracking-widest ${c.text} opacity-90`}
                   >
                     {item.period}
                   </span>
@@ -97,15 +112,20 @@ export default function Education() {
                   {item.institution}
                 </p>
 
-                {item.detail && (
-                  <div className="mt-auto pt-2">
-                    <span className="inline-block bg-white/90 border-2 border-black rounded px-2.5 py-1 font-nunito font-black text-[11px] uppercase tracking-wide text-lego-dark">
-                      {item.detail}
-                    </span>
+                {item.details && (
+                  <div className="mt-auto pt-2 flex flex-wrap gap-2">
+                    {item.details.map((detail) => (
+                      <span
+                        key={detail}
+                        className="inline-block bg-white/90 border-2 border-black rounded px-2.5 py-1 font-nunito font-black text-[11px] uppercase tracking-wide text-lego-dark"
+                      >
+                        {detail}
+                      </span>
+                    ))}
                   </div>
                 )}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           );
         })}
       </div>
