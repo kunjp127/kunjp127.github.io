@@ -2,6 +2,7 @@ import { FaDownload, FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 import LegoButton from "./LegoButton";
+import TiltImage from "./TiltImage";
 
 const container = {
   hidden: {},
@@ -105,27 +106,8 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          variants={scaleIn}
-          className="border-black"
-        >
-          <motion.div
-            className="border-[3px] rounded-t-lg overflow-hidden bg-[#9aa8bc] aspect-3/4"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <img
-              src="/headshot.jpg"
-              alt="Kunj Patel"
-              className="w-full h-full object-cover object-top"
-            />
-          </motion.div>
-
-          <div className="bg-lego-red border-[3px] border-t-0 rounded-b-lg py-3 text-center">
-            <span className="font-nunito font-black text-base uppercase tracking-[0.24em] text-white">
-              Kunj Patel · Software Engineer
-            </span>
-          </div>
+        <motion.div variants={scaleIn}>
+          <TiltImage />
         </motion.div>
 
       </motion.div>
