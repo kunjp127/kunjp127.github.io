@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Experience() {
   type LegoColor =
     | "blue"
@@ -115,7 +117,13 @@ export default function Experience() {
       id="experience"
       className="px-10 lg:px-16 pt-8 pb-24 max-w-7xl mx-auto"
     >
-      <div className="text-center mb-16 space-y-3">
+      <motion.div
+        className="text-center mb-16 space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="inline-block bg-lego-dark border-[2.5px] border-black border-b-[5px] rounded px-4 py-2">
           <span className="font-nunito font-black text-sm uppercase tracking-widest text-white">
             Where I've Snapped In
@@ -124,10 +132,9 @@ export default function Experience() {
         <h2 className="font-fredoka text-6xl text-lego-orange [text-shadow:3px_3px_0_#1a1a2e]">
           Experience
         </h2>
-      </div>
+      </motion.div>
 
       <div className="relative">
-        {/* connecting spine */}
         <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-2 -translate-x-1/2 bg-black/10 rounded-full" />
 
         <div className="space-y-16 md:space-y-24">
@@ -136,13 +143,14 @@ export default function Experience() {
             const alignRight = i % 2 === 1;
 
             return (
-              <div
+              <motion.div
                 key={i}
-                className={`relative md:grid md:grid-cols-2 md:gap-16 items-start ${
-                  alignRight ? "" : ""
-                }`}
+                className={`relative md:grid md:grid-cols-2 md:gap-16 items-start`}
+                initial={{ opacity: 0, x: alignRight ? 60 : -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
               >
-                {/* spine node */}
                 <div className="hidden md:block absolute left-1/2 top-8 -translate-x-1/2 w-6 h-6 rounded-full bg-lego-dark border-[3px] border-black z-10" />
 
                 <div className={alignRight ? "md:col-start-2" : ""}>
@@ -151,9 +159,10 @@ export default function Experience() {
                       alignRight ? "md:ml-8" : "md:mr-8"
                     }`}
                   >
-                    {/* brick body */}
-                    <div
+                    <motion.div
                       className={`${c.bg} border-[3px] border-black border-b-[6px] rounded-lg px-7 py-6 space-y-4`}
+                      whileHover={{ scale: 1.02, rotate: 0.3 }}
+                      transition={{ type: "spring", stiffness: 300 }}
                     >
                       <div className="flex flex-wrap items-baseline justify-between gap-2">
                         <h3
@@ -196,10 +205,10 @@ export default function Experience() {
                           </span>
                         ))}
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
