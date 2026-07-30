@@ -4,13 +4,13 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa6";
 const links = [
   {
     label: "Email",
-    href: "mailto:kunjp127@gmail.com",
+    href: "mailto:kunjp0127@gmail.com",
     icon: <FaEnvelope />,
     color: "bg-lego-red",
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/kunjpatel127",
+    href: "https://www.linkedin.com/in/kunj-patel-a88350237/",
     icon: <FaLinkedin />,
     color: "bg-lego-blue",
   },
@@ -76,14 +76,17 @@ export default function Contact() {
       </motion.div>
 
       <motion.div
-        className="text-center mt-20 pt-8 border-t-2 border-black/10"
+        className="text-center mt-16 sm:mt-20 pt-8 border-t-2 border-black/10 space-y-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        <p className="font-nunito font-bold text-sm text-gray-500 uppercase tracking-wider">
-          Built brick by brick with React & Tailwind
+        <p className="font-nunito font-bold text-xs sm:text-sm text-gray-500 uppercase tracking-wider">
+          Languages Spoken: English · Gujarati · Hindi
+        </p>
+        <p className="font-nunito font-bold text-xs sm:text-sm text-gray-400 uppercase tracking-wider">
+          Built brick by brick with React &amp; Tailwind
         </p>
       </motion.div>
     </section>

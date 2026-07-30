@@ -15,7 +15,7 @@ const BRICKS = [
 
 export default function FloatingBricks() {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div className="hidden md:block fixed inset-0 pointer-events-none overflow-hidden z-0">
       {BRICKS.map((brick, i) => (
         <motion.div
           key={i}

@@ -8,6 +8,7 @@ import Credentials from "./components/Education";
 import Contact from "./components/Contact";
 import FloatingBricks from "./components/FloatingBricks";
 import ScrollProgress from "./components/ScrollProgress";
+import BackToTop from "./components/BackToTop";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Credentials />
         <Contact />
       </div>
+      <BackToTop />
     </div>
   );
 }
