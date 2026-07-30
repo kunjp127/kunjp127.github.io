@@ -81,6 +81,23 @@ export default function Experience() {
       ],
     },
     {
+      role: "THINK Developer",
+      company: "THON",
+      period: "May 2023 — April 2024",
+      color: "purple",
+      points: [
+        "Developed internal software powering THON's inner workings including finances, applications, and organizational operations.",
+        "Built and maintained local tools used across the organization to streamline workflows and data management.",
+        "Transitioned into the Lead Software Engineer role for store.thon.org after demonstrating impact on internal tooling.",
+      ],
+      stack: [
+        "Python",
+        "Django",
+        "JavaScript",
+        "Internal Tools",
+      ],
+    },
+    {
       role: "Solutions Engineer Intern",
       company: "Samtek Inc.",
       period: "June 2024 — August 2024",
@@ -97,6 +114,24 @@ export default function Experience() {
         "Athena",
         "QuickSight",
         "Python",
+      ],
+    },
+    {
+      role: "IT Support Specialist",
+      company: "Penn State Scranton",
+      period: "Sept 2022 — Aug 2023",
+      color: "teal",
+      points: [
+        "Assisted professors, students, and staff in resolving IT issues ranging from basic connectivity to complex classroom hardware.",
+        "Debugged and maintained classroom technology including projectors, computers, microphones, and AV systems.",
+        "Imaged computers with PSU software across professor workstations, laptops, and personal devices; performed hands-on hardware troubleshooting.",
+      ],
+      stack: [
+        "Hardware",
+        "Imaging",
+        "Networking",
+        "AV Systems",
+        "Troubleshooting",
       ],
     },
   ];

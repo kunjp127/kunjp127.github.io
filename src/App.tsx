@@ -8,7 +8,6 @@ import Credentials from "./components/Education";
 import Contact from "./components/Contact";
 import FloatingBricks from "./components/FloatingBricks";
 import ScrollProgress from "./components/ScrollProgress";
-import SectionDivider from "./components/SectionDivider";
 
 export default function App() {
   return (
