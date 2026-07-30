@@ -173,7 +173,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="px-10 lg:px-16 pt-8 pb-24 max-w-7xl mx-auto"
+      className="px-5 sm:px-10 lg:px-16 pt-8 pb-24 max-w-7xl mx-auto"
     >
       <motion.div
         className="text-center mb-16 space-y-3"
@@ -187,7 +187,7 @@ export default function Experience() {
             Where I've Snapped In
           </span>
         </div>
-        <h2 className="font-fredoka text-6xl text-lego-orange [text-shadow:3px_3px_0_#1a1a2e]">
+        <h2 className="font-fredoka text-4xl sm:text-6xl text-lego-orange [text-shadow:3px_3px_0_#1a1a2e]">
           Experience
         </h2>
       </motion.div>
@@ -195,7 +195,7 @@ export default function Experience() {
       <div className="relative">
         <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-2 -translate-x-1/2 bg-black/10 rounded-full" />
 
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-10 sm:space-y-16 md:space-y-24">
           {jobs.map((job, i) => {
             const c = colorMap[job.color];
             const alignRight = i % 2 === 1;
@@ -204,10 +204,10 @@ export default function Experience() {
               <motion.div
                 key={i}
                 className={`relative md:grid md:grid-cols-2 md:gap-16 items-start`}
-                initial={{ opacity: 0, x: alignRight ? 60 : -60 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" as const }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" as const }}
               >
                 <div className="hidden md:block absolute left-1/2 top-8 -translate-x-1/2 w-6 h-6 rounded-full bg-lego-dark border-[3px] border-black z-10" />
 
@@ -218,13 +218,13 @@ export default function Experience() {
                     }`}
                   >
                     <motion.div
-                      className={`${c.bg} border-[3px] border-black border-b-[6px] rounded-lg px-7 py-6 space-y-4`}
+                      className={`${c.bg} border-[3px] border-black border-b-[6px] rounded-lg px-4 sm:px-7 py-5 sm:py-6 space-y-3 sm:space-y-4`}
                       whileHover={{ scale: 1.02, rotate: 0.3 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <div className="flex flex-wrap items-baseline justify-between gap-2">
                         <h3
-                          className={`font-fredoka text-3xl ${c.text} leading-none`}
+                          className={`font-fredoka text-xl sm:text-3xl ${c.text} leading-none`}
                         >
                           {job.role}
                         </h3>

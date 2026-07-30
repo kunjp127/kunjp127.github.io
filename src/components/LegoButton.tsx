@@ -35,7 +35,7 @@ export default function LegoButton({
       transition={{ type: "spring", stiffness: 400, damping: 15 }}
       className={[
         "relative select-none",
-        "w-44 h-20 rounded-sm",
+        "w-full sm:w-44 h-16 sm:h-20 rounded-sm",
         "font-nunito font-bold",
         "cursor-pointer",
         "border-[2.5px] border-black",
@@ -48,15 +48,15 @@ export default function LegoButton({
           <div
             key={i}
             className={[
-              "h-4 w-8 rounded-t-sm border-[2.5px] border-black border-b-0",
+              "h-4 w-6 sm:w-8 rounded-t-sm border-[2.5px] border-black border-b-0",
               baseColor,
             ].join(" ")}
           />
         ))}
       </div>
 
-      <div className="flex h-full items-center justify-center px-6 pb-2">
-        <span className="text-lg sm:text-xl leading-tight text-white text-center">
+      <div className="flex h-full items-center justify-center px-4 sm:px-6 pb-2">
+        <span className="text-base sm:text-xl leading-tight text-white text-center">
           {children}
         </span>
       </div>

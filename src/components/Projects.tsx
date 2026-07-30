@@ -90,7 +90,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-10 lg:px-16 py-20 max-w-7xl mx-auto">
+    <section id="projects" className="px-5 sm:px-10 lg:px-16 py-12 sm:py-20 max-w-7xl mx-auto">
       <motion.div
         className="text-center mb-16 space-y-3"
         initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export default function Projects() {
             What I've Built
           </span>
         </div>
-        <h2 className="font-fredoka text-6xl text-lego-blue [text-shadow:3px_3px_0_#000]">
+        <h2 className="font-fredoka text-4xl sm:text-6xl text-lego-blue [text-shadow:3px_3px_0_#000]">
           Projects
         </h2>
       </motion.div>
@@ -124,7 +124,7 @@ export default function Projects() {
             }}
             whileHover={{ scale: 1.02, rotate: 0.3 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className={`${project.color} border-[3px] border-black border-b-[6px] rounded-lg p-7 flex flex-col gap-4`}
+            className={`${project.color} border-[3px] border-black border-b-[6px] rounded-lg p-5 sm:p-7 flex flex-col gap-3 sm:gap-4`}
           >
             <div className="flex items-start justify-between gap-3">
               <h3 className="font-fredoka text-2xl text-white leading-tight">

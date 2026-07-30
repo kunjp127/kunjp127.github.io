@@ -53,7 +53,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="px-10 lg:px-16 max-w-7xl mx-auto pb-15"
+      className="px-5 sm:px-10 lg:px-16 max-w-7xl mx-auto pb-15"
     >
       <motion.div
         className="text-center mb-16 space-y-3"
@@ -67,12 +67,12 @@ export default function Education() {
             Building Blocks of Knowledge
           </span>
         </div>
-        <h2 className="font-fredoka text-6xl text-lego-teal [text-shadow:3px_3px_0_#000]">
+        <h2 className="font-fredoka text-4xl sm:text-6xl text-lego-teal [text-shadow:3px_3px_0_#000]">
           Education &amp; Certs
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
         {credentials.map((item, i) => {
           const c = colorMap[item.color];
           const Icon = item.type === "degree" ? FaGraduationCap : GrCertificate;

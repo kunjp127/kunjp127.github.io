@@ -50,7 +50,7 @@ const categories: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-10 lg:px-16 py-20 max-w-7xl mx-auto">
+    <section id="skills" className="px-5 sm:px-10 lg:px-16 py-12 sm:py-20 max-w-7xl mx-auto">
       <motion.div
         className="text-center mb-16 space-y-3"
         initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export default function Skills() {
             My Brick Collection
           </span>
         </div>
-        <h2 className="font-fredoka text-6xl text-lego-purple [text-shadow:3px_3px_0_#000]">
+        <h2 className="font-fredoka text-4xl sm:text-6xl text-lego-purple [text-shadow:3px_3px_0_#000]">
           Skills &amp; Tools
         </h2>
       </motion.div>

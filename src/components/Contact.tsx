@@ -24,7 +24,7 @@ const links = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-10 lg:px-16 py-20 max-w-7xl mx-auto">
+    <section id="contact" className="px-5 sm:px-10 lg:px-16 py-12 sm:py-20 max-w-7xl mx-auto">
       <motion.div
         className="text-center mb-12 space-y-3"
         initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export default function Contact() {
             Let's Connect
           </span>
         </div>
-        <h2 className="font-fredoka text-6xl text-lego-red [text-shadow:3px_3px_0_#000]">
+        <h2 className="font-fredoka text-4xl sm:text-6xl text-lego-red [text-shadow:3px_3px_0_#000]">
           Get In Touch
         </h2>
         <p className="font-nunito text-lg text-gray-700 max-w-md mx-auto pt-2">
@@ -46,7 +46,7 @@ export default function Contact() {
       </motion.div>
 
       <motion.div
-        className="flex flex-wrap justify-center gap-6"
+        className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ export default function Contact() {
             whileHover={{ scale: 1.08, rotate: 1, y: -4 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className={`${link.color} border-[3px] border-black border-b-[6px] rounded-lg px-8 py-6 flex items-center gap-4 no-underline`}
+            className={`${link.color} border-[3px] border-black border-b-[6px] rounded-lg px-6 sm:px-8 py-4 sm:py-6 flex items-center justify-center gap-3 sm:gap-4 no-underline`}
           >
             <span className="text-3xl text-white">{link.icon}</span>
             <span className="font-nunito font-black text-lg uppercase tracking-wider text-white">

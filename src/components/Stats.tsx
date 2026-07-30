@@ -34,7 +34,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [inView, value]);
 
   return (
-    <span ref={ref} className="font-fredoka text-4xl text-white [text-shadow:2px_2px_0_rgba(0,0,0,0.3)]">
+    <span ref={ref} className="font-fredoka text-2xl sm:text-4xl text-white [text-shadow:2px_2px_0_rgba(0,0,0,0.3)]">
       {count}{suffix}
     </span>
   );
@@ -43,7 +43,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 export default function Stats() {
   return (
     <motion.div
-      className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto px-10 lg:px-16 pb-12"
+      className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto px-5 sm:px-10 lg:px-16 pb-12"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
@@ -58,10 +58,10 @@ export default function Stats() {
           }}
           whileHover={{ scale: 1.05, y: -3 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className={`${stat.color} border-[3px] border-black border-b-[6px] rounded-lg p-5 text-center flex flex-col items-center gap-1`}
+          className={`${stat.color} border-[3px] border-black border-b-[6px] rounded-lg p-3 sm:p-5 text-center flex flex-col items-center gap-1`}
         >
           <Counter value={stat.value} suffix={stat.suffix} />
-          <span className="font-nunito font-black text-[11px] uppercase tracking-wider text-white/90">
+          <span className="font-nunito font-black text-[9px] sm:text-[11px] uppercase tracking-wider text-white/90">
             {stat.label}
           </span>
         </motion.div>
