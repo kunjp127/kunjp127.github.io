@@ -26,7 +26,7 @@ export default function Experience() {
     {
       role: "Lead Software Engineer",
       company: "Impact Incubator",
-      period: "May 2025 — Present",
+      period: "May 2025 - Present",
       location: "State College, PA",
       color: "blue",
       points: [
@@ -49,12 +49,12 @@ export default function Experience() {
     {
       role: "Lead Software Engineer",
       company: "THON",
-      subtitle: "The world's largest student-run philanthropy — raised $254M+ for pediatric cancer, mobilizing 16,000+ volunteers",
-      period: "April 2024 — Present",
+      subtitle: "The world's largest student-run philanthropy - raised $254M+ for pediatric cancer, mobilizing 16,000+ volunteers",
+      period: "April 2024 - Present",
       location: "State College, PA",
       color: "yellow",
       points: [
-        "Built store.thon.org from the ground up — leading end-to-end development of a production full-stack e-commerce platform serving thousands of users and generating $30K/month in revenue.",
+        "Built store.thon.org from the ground up - leading end-to-end development of a production full-stack e-commerce platform serving thousands of users and generating $30K/month in revenue.",
         "Developed a Vue.js frontend and Django backend, designing RESTful APIs for products, orders, transactions, and internal service integrations.",
         "Integrated Evalon payment processing with secure payment workflows adhering to PCI DSS compliance best practices including tokenization, encryption, and least-privilege access.",
         "Integrated the store with multiple internal services for inventory management, order fulfillment, and reporting, ensuring data consistency across THON systems.",
@@ -79,7 +79,7 @@ export default function Experience() {
     {
       role: "Tech Captain / Full Stack Software Engineer",
       company: "Penn State Homecoming",
-      period: "2024 — Present",
+      period: "2024 - Present",
       location: "State College, PA",
       color: "green",
       points: [
@@ -99,7 +99,7 @@ export default function Experience() {
     {
       role: "Solutions Engineer Intern",
       company: "Samtek Inc.",
-      period: "June 2024 — August 2024",
+      period: "June 2024 - August 2024",
       location: "Aldie, VA",
       color: "red",
       points: [
@@ -121,7 +121,7 @@ export default function Experience() {
       role: "THINK Developer",
       company: "THON",
       subtitle: "Internal tools powering the world's largest student-run philanthropy",
-      period: "May 2023 — April 2024",
+      period: "May 2023 - April 2024",
       location: "State College, PA",
       color: "purple",
       points: [
@@ -140,7 +140,7 @@ export default function Experience() {
     {
       role: "IT Support Specialist",
       company: "Penn State Scranton",
-      period: "Sept 2022 — Aug 2023",
+      period: "Sept 2022 - Aug 2023",
       location: "Dunmore, PA",
       color: "teal",
       points: [

@@ -38,7 +38,7 @@ export default function TiltImage() {
       <div className="border-[3px] rounded-t-lg overflow-hidden bg-[#9aa8bc] aspect-3/4 shadow-[0_10px_40px_rgba(0,0,0,0.15)]">
         <img
           src="/headshot.jpg"
-          alt="Kunj Patel — Full-Stack Software Engineer"
+          alt="Kunj Patel - Full-Stack Software Engineer"
           className="w-full h-full object-cover object-top"
         />
       </div>
