@@ -82,9 +82,6 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        <p className="font-nunito font-bold text-xs sm:text-sm text-gray-500 uppercase tracking-wider">
-          Languages Spoken: English · Gujarati · Hindi
-        </p>
         <p className="font-nunito font-bold text-xs sm:text-sm text-gray-400 uppercase tracking-wider">
           Built brick by brick with React &amp; Tailwind
         </p>
